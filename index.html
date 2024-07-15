@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Management</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productName" placeholder="Product Name">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productPrice" placeholder="Product Price">
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productCategory" placeholder="Product Category">
+            <label for="productCategory">Product Category</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productDescription" placeholder="Product Description">
+            <label for="productDescription">Product Description</label>
+        </div>
+
+        <button id="addBtn" type="button" class="btn btn-outline-info w-100 mb-3 d-block" onclick="addProduct()">Add Product</button>
+        <button id="updateBtn" type="button" class="btn btn-outline-warning w-100 mb-3 d-none" >Update Product</button>
+       
+  <input class="form-control me-2 w-50 mb-3" type="search" placeholder="Search" aria-label="Search" oninput=" searchProducts(this.value)"> 
+        <table class="table table-striped table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+     
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
